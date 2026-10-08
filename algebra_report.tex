@@ -1,0 +1,50 @@
+\documentclass[dvipdfmx]{jlreq}
+\usepackage{silence} %エラー回避
+\WarningFilter{caption}{Unknown document class}
+\usepackage{comment} %複数行のコメントアウト
+\usepackage{mathtools, amssymb, amsthm} %数学関係
+\usepackage{pxrubrica} %ルビ
+\usepackage{graphicx} %画像の挿入
+\usepackage{caption} %図表のタイトルのカスタマイズ
+\usepackage{qrcode} %QRコードの作成
+\begin{document}
+\title{「眼力」を用いた二項定理の拡張について}
+\date{}
+\author{79期 2-B 12番 兼清一誓}
+\maketitle
+\section{はじめに}
+一学期では、二種類の「\ruby{眼力}{がん|りき}」を学んだ。
+\begin{enumerate}
+\item 多項式の展開におけるもの
+\item 多項式の因数分解におけるもの
+\end{enumerate}
+
+今回は1. について扱う。
+
+\section{準備}
+まず、二項定理とは、次のようなものである。
+\[(a + b)^n = \sum_{r=0}^{n} {}_n\mathrm{C}_r a^{n-r}b^r\]
+
+というわけで、題名からのお察しの通り、これから$(a+b)^n$を、$(a+b+c)^n$、$(a+b+c+d)^n \cdots$ のように増やしていく。
+\section{拡張}
+「眼力」とは、係数に着目して計算を脳内で簡単に行う方法である。これは、「項の選び方」を利用する二項定理と通ずるところがある。この「項の選び方」の考え方を利用していく。
+\subsection{$(a+b+c)^n$の場合}
+この場合、展開後の各項の$a$と$b$と$c$の指数の和は当然$n$になる。ここで、展開後の項のうちひとつを$a^p b^q c^r$とする。この係数は、$p$個の$a$と$q$個の$b$と$r$個の$c$の並べ方の総数であるので、$\displaystyle \frac{n!}{p! \, q! \, r!}$であるといえる。
+よって、$p+q+r=n$ を満たす非負整数 $p, q, r$ のすべての組について和をとることで、$(a+b+c)^n$ の展開式は次のように表すことができる。
+\[ (a+b+c)^n = \sum_{\substack{p+q+r=n \\ p,q,r \ge 0}} \frac{n!}{p! \, q! \, r!} a^p b^q c^r \]
+
+ここで、$\sum$ の下部に書かれた条件は、指数の和が $n$ になるすべての組み合わせについて足し合わせることを意味している。
+\subsection{一般の$(a_1 + a_2 + \cdots + a_m)^n$の場合}
+前項と同じ考え方を利用する。展開項のうちの一つを$a_1^{p_1} a_2^{p_2} \dots a_m^{p_m}$とすると、この係数は$p_1$個の$a_1$, $p_2$個の$a_2$, $\dots , p_m$個の$a_m$の並べ方の総数であるので、$\displaystyle \frac{n!}{p_1! \, p_2! \cdots p_m!}$である。以上のことから、$(a_1 + a_2 + \cdots + a_m)^n$を$\sum$記号を用いて一つの式にまとめると、次のようになる。
+\[ (a_1 + a_2 + \cdots + a_m)^n = \sum_{\substack{p_1 + p_2 + \cdots + p_m = n \\ p_i \ge 0}} \frac{n!}{p_1! \, p_2! \cdots p_m!}a_1^{p_1} a_2^{p_2} \cdots a_m^{p_m} \]
+\section{まとめ}
+今回は「眼力」を利用した二項定理の拡張について書いた。二項定理は項の選び方というより項の並べ方に関する定理として見たほうがわかりやすく、拡張も容易であることがわかった。薄井先生なら「...あれ？　なんか内容薄くないか？」と思われたことだろう。その通りである。今回のレポートは、\LaTeX を用いて書いた。自分のPCに\TeX{} Liveを入れた記念レポートのようなものであり、ちょうどいい題材もあったので、運用テストも兼ねて、書いてみたのである。今後のレポートはもっと頑張って濃い内容のものを書くつもりである。...このような締め方になって申し訳ないが、今回のレポートはこれで終わろうと思う。
+
+──ご精読ありがとうございました。
+\begin{figure}[htbp]
+  \centering
+  \vspace{1cm}
+  \qrcode[height=4cm]{https://drive.google.com/file/d/1i0Xx96eeQZoFQavAyeF2s4wNoCRqTWYb/edit}
+  \caption*{今回の\TeX ソースファイル}
+\end{figure}
+\end{document}
