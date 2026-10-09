@@ -29,5 +29,5 @@ template <typename... Args> void read(Args&... args){(read(args), ...);}
 
 int main() {
     cin.tie(nullptr); ios::sync_with_stdio(false);
-    
+    cout<"Hello, World!";
 }
