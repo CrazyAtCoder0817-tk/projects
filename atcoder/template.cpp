@@ -18,6 +18,9 @@ using vvll = vector<vector<long long>>;
 #define rep3(i, m, n) for (ll i = (ll)(m); i < (ll)(n); i++)
 #define rsort(v) sort((v).begin(), (v).end(), greater<>())
 #define endl '\n'
+#define maxe(A)(*max_element(all(A)))
+#define mine(A)(*min_element(all(A)))
+#define acc(A)(accumulate(all(A),0LL))
 
 template <typename T, typename U> inline bool chmin(T& a, const U& b){return(a>b ? a=b, true:false);}
 template <typename T, typename U> inline bool chmax(T& a, const U& b){return(a<b ? a=b, true:false);}
