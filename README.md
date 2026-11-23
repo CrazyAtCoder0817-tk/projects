@@ -1,4 +1,4 @@
-# 約数の個数 (Number of Divisors)
+# Number of Divisors
 
 実行時間制限: 2 sec / メモリ制限: 1024 MiB
 
